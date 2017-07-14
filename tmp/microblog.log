@@ -1,0 +1,381 @@
+2017-07-11 16:07:19,576 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-11 16:09:29,157 ERROR: Exception on /edit [POST] [in C:\Users\2016\Envs\microblogenv\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "E:\pyproject\microblog\app\views.py", line 111, in edit
+    db.session.commit()
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\scoping.py", line 157, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\session.py", line 906, in commit
+    self.transaction.commit()
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\session.py", line 461, in commit
+    self._prepare_impl()
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\session.py", line 441, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\session.py", line 2171, in flush
+    self._flush(objects)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\session.py", line 2291, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\session.py", line 2255, in _flush
+    flush_context.execute()
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 389, in execute
+    rec.execute(self)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 548, in execute
+    uow
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\persistence.py", line 177, in save_obj
+    mapper, table, update)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\persistence.py", line 737, in _emit_update_statements
+    execute(statement, multiparams)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\engine\base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\sql\elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\engine\base.py", line 1053, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\engine\base.py", line 1189, in _execute_context
+    context)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\engine\base.py", line 1402, in _handle_dbapi_exception
+    exc_info
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\util\compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\engine\base.py", line 1182, in _execute_context
+    context)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\engine\default.py", line 470, in do_execute
+    cursor.execute(statement, parameters)
+IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.nickname [SQL: u'UPDATE user SET nickname=?, about_me=? WHERE user.id = ?'] [parameters: (u'williamcullen', u'yahoo\u8981\u5012\u95ed\u4e86', 2)]
+2017-07-11 16:31:49,267 ERROR: Exception on /edit [POST] [in C:\Users\2016\Envs\microblogenv\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "E:\pyproject\microblog\app\views.py", line 111, in edit
+    db.session.commit()
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\scoping.py", line 157, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\session.py", line 906, in commit
+    self.transaction.commit()
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\session.py", line 461, in commit
+    self._prepare_impl()
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\session.py", line 441, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\session.py", line 2171, in flush
+    self._flush(objects)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\session.py", line 2291, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\session.py", line 2255, in _flush
+    flush_context.execute()
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 389, in execute
+    rec.execute(self)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 548, in execute
+    uow
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\persistence.py", line 177, in save_obj
+    mapper, table, update)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\persistence.py", line 737, in _emit_update_statements
+    execute(statement, multiparams)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\engine\base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\sql\elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\engine\base.py", line 1053, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\engine\base.py", line 1189, in _execute_context
+    context)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\engine\base.py", line 1402, in _handle_dbapi_exception
+    exc_info
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\util\compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\engine\base.py", line 1182, in _execute_context
+    context)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\engine\default.py", line 470, in do_execute
+    cursor.execute(statement, parameters)
+IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.nickname [SQL: u'UPDATE user SET nickname=?, about_me=? WHERE user.id = ?'] [parameters: (u'williamcullen', u'yahoo\u8981\u5012\u95ed\u4e86', 2)]
+2017-07-11 16:33:21,711 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-11 17:09:42,167 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-11 17:11:38,223 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-11 17:12:17,737 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-11 17:12:18,457 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-11 17:14:59,943 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-11 17:35:32,956 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-11 17:35:56,177 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-11 17:37:10,138 ERROR: Exception on /login [GET] [in C:\Users\2016\Envs\microblogenv\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\flask_openid.py", line 507, in decorated
+    openid_response, self.extension_responses))
+  File "E:\pyproject\microblog\app\views.py", line 72, in after_login
+    db.session.commit()
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\scoping.py", line 157, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\session.py", line 906, in commit
+    self.transaction.commit()
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\session.py", line 461, in commit
+    self._prepare_impl()
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\session.py", line 441, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\session.py", line 2171, in flush
+    self._flush(objects)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\session.py", line 2291, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\session.py", line 2255, in _flush
+    flush_context.execute()
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 389, in execute
+    rec.execute(self)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 548, in execute
+    uow
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\persistence.py", line 181, in save_obj
+    mapper, table, insert)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\persistence.py", line 835, in _emit_insert_statements
+    execute(statement, params)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\engine\base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\sql\elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\engine\base.py", line 1053, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\engine\base.py", line 1189, in _execute_context
+    context)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\engine\base.py", line 1402, in _handle_dbapi_exception
+    exc_info
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\util\compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\engine\base.py", line 1182, in _execute_context
+    context)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\engine\default.py", line 470, in do_execute
+    cursor.execute(statement, parameters)
+IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.nickname [SQL: u'INSERT INTO user (nickname, email, role, about_me, last_seen) VALUES (?, ?, ?, ?, ?)'] [parameters: (u'VEV Vera', u'tttqqqsssgogogo@yahoo.com', 0, None, None)]
+2017-07-11 17:51:50,216 ERROR: Exception on /login [GET] [in C:\Users\2016\Envs\microblogenv\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\flask_openid.py", line 507, in decorated
+    openid_response, self.extension_responses))
+  File "E:\pyproject\microblog\app\views.py", line 72, in after_login
+    db.session.commit()
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\scoping.py", line 157, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\session.py", line 906, in commit
+    self.transaction.commit()
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\session.py", line 461, in commit
+    self._prepare_impl()
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\session.py", line 441, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\session.py", line 2171, in flush
+    self._flush(objects)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\session.py", line 2291, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\session.py", line 2255, in _flush
+    flush_context.execute()
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 389, in execute
+    rec.execute(self)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 548, in execute
+    uow
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\persistence.py", line 181, in save_obj
+    mapper, table, insert)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\orm\persistence.py", line 835, in _emit_insert_statements
+    execute(statement, params)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\engine\base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\sql\elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\engine\base.py", line 1053, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\engine\base.py", line 1189, in _execute_context
+    context)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\engine\base.py", line 1402, in _handle_dbapi_exception
+    exc_info
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\util\compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\engine\base.py", line 1182, in _execute_context
+    context)
+  File "C:\Users\2016\Envs\microblogenv\lib\site-packages\sqlalchemy\engine\default.py", line 470, in do_execute
+    cursor.execute(statement, parameters)
+IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.nickname [SQL: u'INSERT INTO user (nickname, email, role, about_me, last_seen) VALUES (?, ?, ?, ?, ?)'] [parameters: (u'VEV Vera', u'tttqqqsssgogogo@yahoo.com', 0, None, None)]
+2017-07-11 17:58:38,046 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-11 17:58:47,233 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-11 17:58:58,295 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-11 17:59:11,118 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-11 17:59:19,790 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-11 17:59:23,967 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-11 17:59:31,342 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-11 17:59:37,270 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-11 18:00:55,377 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-11 18:01:58,099 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-11 18:02:06,173 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-11 18:02:11,443 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-11 18:03:53,595 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-11 18:04:00,302 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 10:02:19,437 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 10:02:56,447 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 10:03:21,069 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 10:05:46,801 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 10:05:53,579 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 10:06:08,138 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 10:06:11,484 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 10:06:18,464 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 10:06:51,444 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 10:06:55,352 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 10:07:00,118 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 10:07:16,796 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 10:07:20,466 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 10:07:33,490 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 10:07:42,009 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 10:08:11,766 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 10:08:31,276 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 10:08:36,520 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 10:08:58,132 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 10:09:09,414 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 10:09:48,989 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 10:10:55,375 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 10:10:59,775 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 10:11:02,809 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 10:47:35,349 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 10:59:50,596 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 11:00:44,483 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 11:01:01,709 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 11:01:50,198 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 11:01:57,592 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 11:02:14,062 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 11:02:26,624 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 11:02:30,328 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 11:03:05,200 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 11:03:16,993 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 11:03:39,108 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 11:03:52,253 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 11:05:46,226 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 11:07:09,444 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 11:07:29,680 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 16:00:44,647 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 16:17:19,372 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 16:20:06,035 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 16:20:56,312 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 17:19:58,364 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 17:20:19,812 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 17:48:18,051 INFO: microblog startup [in app\__init__.py:37]
+2017-07-12 17:56:39,563 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 17:57:18,318 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 17:57:32,625 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 17:58:03,944 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 17:58:08,444 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 17:58:27,592 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 17:59:01,184 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-12 17:59:27,369 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 10:19:17,075 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 10:19:48,348 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 10:19:55,634 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 10:20:47,609 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 10:20:56,967 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 10:21:17,575 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 10:21:22,151 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 10:21:37,387 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 10:21:59,839 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 10:22:25,229 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 10:23:01,589 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 10:47:36,243 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 10:47:36,877 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 10:48:52,174 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 10:48:52,894 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 11:36:52,319 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 11:40:43,049 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 11:43:42,959 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 11:43:43,611 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 11:44:38,826 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 11:44:39,490 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 11:44:52,766 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 11:44:53,421 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 11:49:43,510 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 11:49:44,194 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 11:57:01,674 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 11:57:02,316 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 11:58:35,950 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 11:58:36,619 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 11:59:34,390 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 11:59:35,082 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 11:59:57,039 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 12:00:31,289 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 12:21:46,994 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 12:21:47,687 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 12:25:34,096 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 12:25:34,789 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 15:03:05,553 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 15:03:06,220 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 15:35:01,151 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 15:35:01,792 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 15:42:00,305 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 15:42:00,977 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 15:45:29,321 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 15:46:22,154 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 15:49:03,506 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 15:53:12,186 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 15:54:37,467 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 15:55:25,138 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 15:57:52,631 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 15:57:53,293 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 16:14:14,361 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 16:14:40,635 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 16:15:02,463 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 16:24:46,464 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 16:32:12,601 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 16:57:44,964 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 17:14:08,385 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 17:50:58,555 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 17:50:59,308 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 17:51:36,563 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 17:51:37,907 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 17:51:38,766 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 17:51:45,397 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 17:51:46,161 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 17:52:23,663 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 17:52:24,450 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 18:01:30,088 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 18:05:34,657 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 22:27:12,302 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 22:27:13,082 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 23:14:41,704 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 23:14:42,446 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 23:18:20,940 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]
+2017-07-13 23:18:26,124 INFO: microblog startup [in E:\pyproject\microblog\app\__init__.py:37]

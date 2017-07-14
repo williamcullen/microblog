@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h3><span style="color: #BFB9FF;"> Search results for "{{ query }}":</span></h3>
+    {% for post in results %}
+        {% include 'post.html' %}
+    {% endfor %}
+{% endblock %}
